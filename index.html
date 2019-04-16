@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js – The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-markdown>
+                <textarea data-template>
+					## GUI和CLI
+					![](https://i.loli.net/2019/04/16/5cb5825435033.png)
+				</textarea>
+            </section>
+            <section data-markdown data-background="#1976d2">
+                <textarea data-template>
+					>GUI：干啥你都敲命令不累么？没有什么是一个按钮不能解决的，如果有，那就再多点一下
+
+					>CLI：1920x1080一共2073600个像素点，在其中找到一个30x30的区域然后移过去点它，不痛苦么？那个跳动的输入光标才是我永远的家
+				</textarea>
+            </section>
+            <section data-markdown data-background="#26a69a">
+                <textarea data-template>
+					**git常用命令数量较少，经常要涉及多个文件的操作，合并多个commit，rebase后解决冲突，都是高度一致的重复性操作，cli灵活的优势在工作流中不太能发挥出来，一个能简化日常操作减少失误的gui很有意义。**
+				</textarea>
+            </section>
+            <section data-markdown data-background="#9ccc65">
+                <textarea data-template>
+					## smartGit
+>市面上的git GUI种类非常多，甚至大家每天使用的git CLI，官网安装包内都自带了一个简易版的GUI（丑，过于简陋）
+先后使用过几款竞品，目前来看，smartGit能涵盖我的所有需求，暂时就敲定是它了
+				</textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+					![](https://i.loli.net/2019/04/16/5cb583dc3c19e.png)
+				</textarea>
+            </section>
+            <section data-markdown data-background="#ffffff">
+                <textarea data-template>
+					推荐下载portable绿色版：
+https://www.syntevo.com/smartgit/download/
+				</textarea>
+            </section>
+           
+            <section data-markdown>
+                <textarea data-template>## 总览![](https://i.loli.net/2019/04/16/5cb586e6a1dfd.png)
+				</textarea>
+            </section>
+            <section data-markdown data-background="#ffeb3b">
+                <textarea data-template>
+					### checkout & pull
++ checkout：分支管理中找到origin上所需要的分支直接双击即
+可
++ pull：当然是点一下pull按钮啦
+
+**任何pull动作都会触发同步服务器branch，如新增加的远程分支没有显示可以随便pull一下**
+
+				</textarea>
+            </section>
+            <section data-markdown data-background="#ffc107">
+                <textarea data-template>
+					### new branch & commit
++ new branch：当然是点一下add branch按钮啦
++ commit：
+文件预览区内可以看到每个文件的修改部分，
+discard选项可以直接放弃掉单个文件的改动，
+ctrl多选后支持仅commit选中文件，
+勾选amend会直接合并入上一次commit
+
+**相比CLI省略了add加入暂存区这一步，当然你愿意的话smartGit同样提供了手动加入暂存区功能**
+				</textarea>
+            </section>
+            <section data-markdown data-background="#ff7043">
+                <textarea data-template>
+					### rebase & push
++ rebase：保证本地的master分支已经同步到最新，在rebase选择窗里直接选中master即可，如遇冲突会标识冲突文件并等待用户解决，自带的冲突解决器很好用，解决完后continue与CLI无异
+
+**注意检查rebase后是否有大量异常文件新增或删除，某些时候rebase出错，直接abort重来即可**
++ push：单分支单人开发大部分时候commit时直接选commit&push比较方便
+				</textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+					### conflict resolve & reset
+![](https://i.loli.net/2019/04/16/5cb5925dcd020.png)
+				</textarea>
+            </section>
+            <section data-markdown data-background="">
+                <textarea data-template>
+					+ conflict：可以使用自带的冲突解决器或者任何你喜欢的方式解决冲突
+自带解决器会展示theirs, ours, working tree，可以一键选择用哪个版本，或者手动在working tree上编辑
++ reset：commit时间线中直接选中commit右键reset即可，和CLI一样默认采用mix，对自己操作没信心的选手推荐先切个分支出来再reset & push
+				</textarea>
+            </section>
+            <section data-markdown data-background="#607d8b">
+                <textarea data-template>
+					## 说明
++ 不差钱选手请购买商业许可，一年仅需99刀，非商业版全功能并可免费使用，但是会不定期弹窗要求你确认非商业使用，不要脸的话可以像我一样给他们写封信哭诉然后领一个不弹窗的许可证
++ GUI软件底层还是调用的git CLI，所以理论上和CLI同时使用没有任何问题，甚至rebase到一半换成另一个工具都ok
+
+				</textarea>
+            </section>
+            <section data-markdown data-background="#607d8b">
+                <textarea data-template>
+					+ 项目中配置的eslint是在commit时检查，有error会弹窗抛错等待用户下一步操作，并不会有任何跳过校验的行为
++ 接上一条，如选择了commit&push，校验会拦截commit操作，但push依然会生效，此时可以修改完amend再push一次或者干脆不要用commit&push
+				</textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+					## 实战
+![](https://i.loli.net/2019/04/16/5cb5925db66d9.png)
+				</textarea>
+            </section>
+            <section data-markdown data-background="#7e57c2">
+                <textarea data-template>## THE END
+**有问题请直接联系本文作者或致电syntevo**
+					**最后祝您身体健康，再见**
+				</textarea>
+            </section>
+        </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            { src: 'plugin/highlight/highlight.js', async: true },
+            { src: 'plugin/search/search.js', async: true },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+    </script>
+</body>
+
+</html>
